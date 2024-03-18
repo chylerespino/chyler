@@ -1,0 +1,18 @@
+[Unit]
+
+Description = Python API Service
+After = network.target
+
+[Service]
+
+User = chyler
+Group = chyler
+WorkingDirectory = /chyler/chyler/CPSC222/
+ExecStart = /usr/bin/python3 /chyler/chyler/CPSC222/API.py
+Restart = always
+
+[Install]
+
+WantedBy = multi-user.target
+
+
