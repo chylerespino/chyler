@@ -1,8 +1,8 @@
 <?php
 	class Student
 	{
-		
-		private $first_name, $last_name, $id, $courses; 
+
+		private $first_name, $last_name, $id, $courses;
 
 		public function __construct($first_name, $last_name, $id, $courses) {
 			$this->setFirstName($first_name);
@@ -16,7 +16,7 @@
 			return $this->first_name;
 		}
 
-		public function setFirstName($first_name) 
+		public function setFirstName($first_name)
 		{
 			$this->first_name = $first_name;
 		}
@@ -46,8 +46,8 @@
 			return $this->last_name. ", ".$this->first_name;
 		}
 
-		public function setCourses($c) {
-			$this->courses = $c;
+		public function setCourses($courses) {
+			$this->courses = $courses;
 		}
 
 		public function getCourses()
