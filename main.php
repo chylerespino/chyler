@@ -3,23 +3,17 @@
 	require_once 'student.php';
 	require_once 'letter.php';
 
+	$students = array();
+
 	$student1 = new Student("Kevin", "Slonka", "1001", array("CPSC222" => 98, "CPSC111" => 76, "CPSC333" => 82));
 	$student2 = new Student("Joe", "Schmoe", "1005", array("CPSC122" => 88, "CPSC411" => 46, "CPSC323" => 72)); 
 	$student3 = new Student("Stewie", "Griffin", "1009", array("CPSC244" => 68, "CPSC116" => 96, "CPSC345" => 82));
 
-	$students = array($student1, $student2, $student3);
+	$students[] = $student1;
+	$students[] = $student2;
+	$students[] = $student3;	
 
-?>
-
-<html>
-	<head>
-		<title>Chapters 5 & 6</title>
-	</head>
-
-	<body>
-		<h1>Chapters 5 & 6</h1>
-
-<?php
+	echo "<h1><b>Chapters 5 & 6</b></h1>";
 
 	for ($i = 0; $i < count($students); $i++) {
 		$student = $students[$i];
@@ -31,7 +25,7 @@
 
 		echo "\t\t\t</tr>\n";
 		echo "\t\t\t\t<td><b><center>Student ID</b></td>";
-		echo "\t\t\t\t<td>".$student->getID()."</td>\n";
+		echo "\t\t\t\t<td>".$student->getId()."</td>\n";
 		echo "\t\t\t</tr>\n";
 
 		echo "\t\t\t</tr>\n";
@@ -51,5 +45,3 @@
 	}	
 ?>
 
-	</body>
-</html>	
