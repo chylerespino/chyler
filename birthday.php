@@ -144,7 +144,7 @@
 		echo $date->format('l F jS, Y - g:ia');
 		echo "<br>";
 		echo "<br>";
-		echo "<a href='birthday_formatter.php?page=1'>Show date in ISO format</a>";
+		echo "<a href='birthday.php?page=1'>Show date in ISO format</a>";
 	}
 	else if(isset($_GET['page']) && $_GET['page'] == 1){
 		$date = $_SESSION['date'];
